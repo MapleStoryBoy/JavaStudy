@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>day03笔记</title>
+<title>day04笔记</title>
 
 
 <style type="text/css">
@@ -328,533 +328,493 @@ kbd {
 
 <body>
 
-<h3 id="toc_0">03.01_Java语言基础(逻辑运算符的基本用法)(掌握)</h3>
+<h3 id="toc_0">04.01_Java语言基础(循环结构概述和for语句的格式及其使用)</h3>
 
 <ul>
-<li>A:逻辑运算符有哪些
+<li>A:循环结构的分类
 
 <ul>
-<li>&amp;,|,^,!</li>
-<li>&amp;&amp;,|| </li>
+<li>for,while,do...while </li>
 </ul></li>
-<li>B:案例演示</li>
-<li><p>逻辑运算符的基本用法</p></li>
-<li><p>注意事项：</p>
+<li>B:循环结构for语句的格式：</li>
+<li>
+    for(初始化表达式;条件表达式;循环后的操作表达式) {
+        循环体;
+    }</li>
+<li>C执行流程：
 
 <ul>
-<li>a:逻辑运算符一般用于连接boolean类型的表达式或者值。</li>
-<li>b:表达式：就是用运算符把常量或者变量连接起来的符合java语法的式子。
+<li>a:执行初始化语句</li>
+<li>b:执行判断条件语句,看其返回值是true还是false
 
 <ul>
-<li>算术表达式：a + b</li>
-<li>比较表达式：a == b(条件表达式)</li>
+<li>如果是true，就继续执行</li>
+<li>如果是false，就结束循环</li>
 </ul></li>
+<li>c:执行循环体语句;</li>
+<li>d:执行循环后的操作表达式</li>
+<li>e:回到B继续。</li>
 </ul></li>
-<li><p>C:结论：</p></li>
-<li><p>&amp;逻辑与:有false则false。</p></li>
-<li><p>|逻辑或:有true则true。</p></li>
-<li><p>^逻辑异或:相同为false，不同为true。</p></li>
-<li><p>!逻辑非:非false则true，非true则false。</p>
+<li>D:案例演示
 
 <ul>
-<li>特点：偶数个不改变本身。</li>
+<li>在控制台输出10次&quot;helloworld&quot;</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_1">03.02_Java语言基础(逻辑运算符&amp;&amp;和&amp;的区别)(掌握)</h3>
+<h3 id="toc_1">04.02_Java语言基础(循环结构for语句的练习之获取数据)</h3>
 
 <ul>
 <li>A:案例演示
 
 <ul>
-<li>&amp;&amp;和&amp;的区别?
+<li>需求：请在控制台输出数据1-10</li>
+<li>需求：请在控制台输出数据10-1</li>
+</ul></li>
+<li>B:注意事项
 
 <ul>
-<li>a:最终结果一样。</li>
-<li>b:&amp;&amp;具有短路效果。左边是false，右边不执行。</li>
-<li>  &amp;是无论左边是false还是true,右边都会执行</li>
-</ul></li>
-</ul></li>
-<li>B:同理||和|的区别?(学生自学)</li>
-<li>C:开发中常用谁?
-
-<ul>
-<li>&amp;&amp;,||,!</li>
+<li>a:判断条件语句无论简单还是复杂结果是boolean类型。</li>
+<li>b:循环体语句如果是一条语句，大括号可以省略；如果是多条语句，大括号不能省略。建议永远不要省略。</li>
+<li>c:一般来说：有左大括号就没有分号，有分号就没有左大括号</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_2">03.03_Java语言基础(位运算符的基本用法1)(了解)</h3>
+<h3 id="toc_2">04.03_Java语言基础(循环结构for语句的练习之求和思想)</h3>
 
 <ul>
-<li>A:位运算符有哪些
+<li>A:案例演示
 
 <ul>
-<li>&amp;,|,^,~ ,&gt;&gt;,&gt;&gt;&gt;,&lt;&lt;</li>
+<li>需求：求出1-10之间数据之和</li>
 </ul></li>
-<li><p>B:案例演示</p>
+<li>B:学生练习
 
 <ul>
-<li><p>位运算符的基本用法1</p></li>
-<li><p>&amp;,|,^,~ 的用法</p></li>
-<li><p>&amp;:有0则0</p></li>
-<li><p>|:有1则1</p></li>
-<li><p>^:相同则0，不同则1</p></li>
-<li><p>~:按位取反</p></li>
+<li>需求：求出1-100之间偶数和</li>
+<li>需求：求出1-100之间奇数和</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_3">03.04_Java语言基础(位异或运算符的特点及面试题)(掌握)</h3>
+<h3 id="toc_3">04.04_Java语言基础(循环结构for语句的练习之水仙花)</h3>
 
 <ul>
 <li><p>A:案例演示</p>
 
 <ul>
-<li><p>位异或运算符的特点</p></li>
-<li><p>^的特点：一个数据对另一个数据位异或两次，该数本身不变。</p></li>
-</ul></li>
-<li><p>B:面试题：</p>
-
-<ul>
-<li>请自己实现两个整数变量的交换</li>
-<li>注意：以后讲课的过程中，我没有明确指定数据的类型，默认int类型。</li>
+<li><p>需求：在控制台输出所有的”水仙花数”</p></li>
+<li><p>所谓的水仙花数是指一个三位数，其各位数字的立方和等于该数本身。</p></li>
+<li><p>举例：153就是一个水仙花数。</p></li>
+<li><p>153 = 1<em>1</em>1 + 5<em>5</em>5 + 3<em>3</em>3 = 1 + 125 + 27 = 153</p></li>
 </ul></li>
 </ul>
 
-<h3 id="toc_4">03.05_Java语言基础(位运算符的基本用法2及面试题)(了解)</h3>
-
-<ul>
-<li>A:案例演示 &gt;&gt;,&gt;&gt;&gt;,&lt;&lt;的用法:
-
-<ul>
-<li> &lt;&lt;:左移    左边最高位丢弃，右边补齐0</li>
-<li> &gt;&gt;:右移    最高位是0，左边补齐0;最高为是1，左边补齐1</li>
-<li> &gt;&gt;&gt;:无符号右移 无论最高位是0还是1，左边补齐0</li>
-<li> 最有效率的算出2 * 8的结果</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_5">03.06_Java语言基础(三元运算符的基本用法)(掌握)</h3>
-
-<ul>
-<li>A:三元运算符的格式</li>
-<li>      (关系表达式) ? 表达式1 : 表达式2;</li>
-<li>B:三元运算符的执行流程 </li>
-<li>C:案例演示
-
-<ul>
-<li>获取两个数中的最大值</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_6">03.07_Java语言基础(三元运算符的练习)(掌握)</h3>
+<h3 id="toc_4">04.05_Java语言基础(循环结构for语句的练习之统计思想)</h3>
 
 <ul>
 <li>A:案例演示
 
 <ul>
-<li>比较两个整数是否相同</li>
-</ul></li>
-<li>B:案例演示
-
-<ul>
-<li>获取三个整数中的最大值</li>
+<li>需求：统计”水仙花数”共有多少个</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_7">03.08_Java语言基础(键盘录入的基本格式讲解)(掌握)</h3>
+<h3 id="toc_5">04.06_Java语言基础(循环结构while语句的格式和基本使用)</h3>
 
 <ul>
-<li>A:为什么要使用键盘录入数据
+<li>A:循环结构while语句的格式：</li>
+<li><div><pre><code class="language-none">while循环的基本格式：
+while(判断条件语句) {
+    循环体语句;
+}
+
+完整格式：
+
+初始化语句;
+while(判断条件语句) {
+     循环体语句;
+     控制条件语句;
+}</code></pre></div></li>
+<li><p>B:执行流程：</p>
 
 <ul>
-<li>a:为了让程序的数据更符合开发的数据</li>
-<li>b:让程序更灵活一下</li>
+<li>a:执行初始化语句</li>
+<li>b:执行判断条件语句,看其返回值是true还是false
+
+<ul>
+<li>如果是true，就继续执行</li>
+<li>如果是false，就结束循环</li>
 </ul></li>
-<li>B:如何实现键盘录入呢?
-
-<ul>
-<li>先照格式来。</li>
-<li>a:导包
-
-<ul>
-<li>格式：
-
-<ul>
-<li>import java.util.Scanner; </li>
-</ul></li>
-<li>位置：
-
-<ul>
-<li>在class上面。</li>
-</ul></li>
-</ul></li>
-<li>b:创建键盘录入对象
-
-<ul>
-<li>格式：
-
-<ul>
-<li>Scanner sc = new Scanner(System.in);</li>
-</ul></li>
-</ul></li>
-<li>c:通过对象获取数据<br>
-
-<ul>
-<li>格式：
-
-<ul>
-<li>int x = sc.nextInt();</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>C:案例演示
-
-<ul>
-<li>键盘录入1个整数，并输出到控制台。</li>
-<li>键盘录入2个整数，并输出到控制台。</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_8">03.09_Java语言基础(键盘录入的练习1)(掌握)</h3>
-
-<ul>
-<li>A:案例演示
-
-<ul>
-<li>键盘录入练习：键盘录入两个数据，并对这两个数据求和，输出其结果</li>
-</ul></li>
-<li>B:案例演示
-
-<ul>
-<li>键盘录入练习：键盘录入两个数据，获取这两个数据中的最大值</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_9">03.10_Java语言基础(键盘录入的练习2)(掌握)</h3>
-
-<ul>
-<li>A:案例演示
-
-<ul>
-<li>键盘录入练习：键盘录入两个数据，比较这两个数据是否相等</li>
-</ul></li>
-<li>B:案例演示
-
-<ul>
-<li>键盘录入练习：键盘录入三个数据，获取这三个数据中的最大值</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_10">03.11_Java语言基础(顺序结构语句)(了解)</h3>
-
-<ul>
-<li>A:什么是流程控制语句
-
-<ul>
-<li>流程控制语句：可以控制程序的执行流程。</li>
-</ul></li>
-<li>B:流程控制语句的分类
-
-<ul>
-<li>顺序结构</li>
-<li>选择结构</li>
-<li>循环结构</li>
-</ul></li>
-<li>C:执行流程：
-
-<ul>
-<li>从上往下，依次执行。</li>
-</ul></li>
-<li>D:案例演示
-
-<ul>
-<li>输出几句话看效果即可</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_11">03.12_Java语言基础(选择结构if语句格式1及其使用)(掌握)</h3>
-
-<ul>
-<li>A:选择结构的分类
-
-<ul>
-<li>if语句</li>
-<li>switch语句</li>
-</ul></li>
-<li>B:if语句有几种格式
-
-<ul>
-<li>格式1</li>
-<li>格式2</li>
-<li>格式3</li>
-</ul></li>
-<li>C:if语句的格式1</li>
-<li>
-    if(比较表达式) {
-        语句体;
-    }</li>
-<li>D:执行流程：
-
-<ul>
-<li>先计算比较表达式的值，看其返回值是true还是false。</li>
-<li>如果是true，就执行语句体；</li>
-<li>如果是false，就不执行语句体；</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_12">03.13_Java语言基础(选择结构if语句注意事项)(掌握)</h3>
-
-<ul>
-<li>A:案例演示
-
-<ul>
-<li>a:比较表达式无论简单还是复杂，结果必须是boolean类型</li>
-<li>b:if语句控制的语句体如果是一条语句，大括号可以省略；
-
-<ul>
-<li>如果是多条语句，就不能省略。建议永远不要省略。</li>
-</ul></li>
-<li>c:一般来说：有左大括号就没有分号，有分号就没有左大括号</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_13">03.14_Java语言基础(选择结构if语句格式2及其使用)(掌握)</h3>
-
-<ul>
-<li>A:if语句的格式2</li>
-<li>
-    if(比较表达式) {
-        语句体1;
-    }else {
-        语句体2;
-    }</li>
-<li>B:执行流程：
-
-<ul>
-<li>首先计算比较表达式的值，看其返回值是true还是false。</li>
-<li>如果是true，就执行语句体1；</li>
-<li>如果是false，就执行语句体2；</li>
+<li>c:执行循环体语句;</li>
+<li>d:执行控制条件语句</li>
+<li>e:回到B继续。</li>
 </ul></li>
 <li><p>C:案例演示</p>
 
 <ul>
-<li>a:获取两个数据中较大的值</li>
-<li><p>b:判断一个数据是奇数还是偶数,并输出是奇数还是偶数</p></li>
-<li><p>注意事项：else后面是没有比较表达式的，只有if后面有。</p></li>
+<li>需求：请在控制台输出数据1-10</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_14">03.15_Java语言基础(if语句的格式2和三元的相互转换问题)(掌握)</h3>
+<h3 id="toc_6">04.07_Java语言基础(循环结构while语句的练习)</h3>
 
 <ul>
-<li>A:案例演示
+<li>A:求和思想
 
 <ul>
-<li>if语句和三元运算符完成同一个效果</li>
+<li>求1-100之和</li>
 </ul></li>
-<li><p>B:案例演示</p>
+<li>B:统计思想
 
 <ul>
-<li><p>if语句和三元运算符的区别</p></li>
-<li><p>三元运算符实现的，都可以采用if语句实现。反之不成立。</p></li>
-<li><p>什么时候if语句实现不能用三元改进呢?</p>
-
-<ul>
-<li>当if语句控制的操作是一个输出语句的时候就不能。</li>
-<li>为什么呢?因为三元运算符是一个运算符，运算符操作完毕就应该有一个结果，而不是一个输出。</li>
-</ul></li>
+<li>统计”水仙花数”共有多少个</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_15">03.16_Java语言基础(选择结构if语句格式3及其使用)(掌握)</h3>
+<h3 id="toc_7">04.08_Java语言基础(循环结构do...while语句的格式和基本使用)</h3>
 
 <ul>
-<li>A:if语句的格式3：</li>
-<li>
-    if(比较表达式1) {
-        语句体1;
-    }else if(比较表达式2) {
-        语句体2;
-    }else if(比较表达式3) {
-        语句体3;
-    }
-    ...
-    else {
-        语句体n+1;
-    }</li>
+<li>A:循环结构do...while语句的格式：</li>
+<li><div><pre><code class="language-none">do {
+    循环体语句;
+}while(判断条件语句);
+
+完整格式；
+初始化语句;
+do {
+    循环体语句;
+    控制条件语句;
+}while(判断条件语句);</code></pre></div></li>
 <li><p>B:执行流程：</p>
 
 <ul>
-<li>首先计算比较表达式1看其返回值是true还是false，</li>
-<li>如果是true，就执行语句体1，if语句结束。</li>
-<li><p>如果是false，接着计算比较表达式2看其返回值是true还是false，</p></li>
-<li><p>如果是true，就执行语句体2，if语句结束。</p></li>
-<li><p>如果是false，接着计算比较表达式3看其返回值是true还是false，</p></li>
-<li><p>如果都是false，就执行语句体n+1。</p></li>
+<li>a:执行初始化语句</li>
+<li>b:执行循环体语句;</li>
+<li>c:执行控制条件语句</li>
+<li>d:执行判断条件语句,看其返回值是true还是false
+
+<ul>
+<li>如果是true，就继续执行</li>
+<li>如果是false，就结束循环</li>
 </ul></li>
-<li><p>C:注意事项:最后一个else可以省略,但是建议不要省略,可以对范围外的错误值提示 </p></li>
-</ul>
-
-<h3 id="toc_16">03.17_Java语言基础(选择结构if语句格式3练习)(掌握)</h3>
-
-<ul>
-<li>A:练习1</li>
-<li><div><pre><code class="language-none">需求：键盘录入一个成绩，判断并输出成绩的等级。
-90-100 优
-80-89  良
-70-79  中
-60-69  及
-0-59   差</code></pre></div></li>
-<li><p>B:练习2</p>
-
-<ul>
-<li><p>需求：</p>
-
-<ul>
-<li><p>键盘录入x的值，计算出y的并输出。</p></li>
-<li><p>x&gt;=3  y = 2 * x + 1;</p></li>
-<li><p>-1&lt;x&lt;3    y = 2 * x;</p></li>
-<li><p>x&lt;=-1 y = 2 * x - 1;</p></li>
+<li>e:回到b继续。</li>
 </ul></li>
+<li><p>C:案例演示</p>
+
+<ul>
+<li>需求：请在控制台输出数据1-10</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_17">03.18_Java语言基础(选择结构if语句的嵌套使用)(掌握)</h3>
+<h3 id="toc_8">04.09_Java语言基础(循环结构三种循环语句的区别)</h3>
 
 <ul>
 <li>A:案例演示
 
 <ul>
-<li>需求：获取三个数据中的最大值</li>
-<li>if语句的嵌套使用。</li>
+<li>三种循环语句的区别:</li>
+<li>do...while循环至少执行一次循环体。</li>
+<li>而for,while循环必须先判断条件是否成立，然后决定是否执行循环体语句。</li>
 </ul></li>
-</ul>
-
-<h3 id="toc_18">03.19_Java语言基础(选择结构switch语句的格式及其解释)(掌握)</h3>
-
-<ul>
-<li>A:switch语句的格式</li>
-<li><div><pre><code class="language-none">switch(表达式) {
-      case 值1：
-        语句体1;
-        break;
-        case 值2：
-        语句体2;
-        break;
-        …
-        default：    
-        语句体n+1;
-        break;
-}</code></pre></div></li>
-<li><p>B:switch语句的格式解释</p></li>
-<li><p>C:面试题</p>
-
-<ul>
-<li>byte可以作为switch的表达式吗?</li>
-<li>long可以作为switch的表达式吗?</li>
-<li>String可以作为switch的表达式吗?</li>
-</ul></li>
-<li><p>C:执行流程</p>
-
-<ul>
-<li>先计算表达式的值</li>
-<li>然后和case后面的匹配，如果有就执行对应的语句，否则执行default控制的语句</li>
-</ul></li>
-</ul>
-
-<h3 id="toc_19">03.20_Java语言基础(选择结构switch语句的练习)(掌握)</h3>
-
-<ul>
-<li>A:整数(给定一个值,输出对应星期几)</li>
-</ul>
-
-<h3 id="toc_20">03.21_Java语言基础(选择结构switch语句的注意事项)(掌握)</h3>
-
-<ul>
-<li>A:案例演示
-
-<ul>
-<li>a:case后面只能是常量，不能是变量，而且，多个case后面的值不能出现相同的</li>
-<li>b:default可以省略吗?
-
-<ul>
-<li>可以省略，但是不建议，因为它的作用是对不正确的情况给出提示。</li>
-<li>特殊情况：
-
-<ul>
-<li>case就可以把值固定。</li>
-<li>A,B,C,D</li>
-</ul></li>
-</ul></li>
-<li>c:break可以省略吗?
-
-<ul>
-<li>最后一个可以省略,其他最好不要省略</li>
-<li>会出现一个现象：case穿透。</li>
-<li>最终我们建议不要省略</li>
-</ul></li>
-<li>d:default一定要在最后吗?
-
-<ul>
-<li>不是，可以在任意位置。但是建议在最后。</li>
-</ul></li>
-<li>e:switch语句的结束条件
-
-<ul>
-<li>a:遇到break就结束了</li>
-<li>b:执行到switch的右大括号就结束了</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h3 id="toc_21">03.22_Java语言基础(选择结构switch语句练习)(掌握)</h3>
-
-<ul>
-<li>A:看程序写结果：</li>
-<li><div><pre><code class="language-none">int x = 2;
-int y = 3;
-switch(x){
-    default:
-        y++;
-        break;
-    case 3:
-        y++;
-    case 4:
-        y++;
-}
-System.out.println(&quot;y=&quot;+y);</code></pre></div></li>
-<li><p>B:看程序写结果：</p></li>
-<li><div><pre><code class="language-none">int x = 2;
-int y = 3;
-switch(x){
-    default:
-        y++;
-    case 3:
-        y++;
-    case 4:
-        y++;
-}
-System.out.println(&quot;y=&quot;+y);</code></pre></div></li>
-</ul>
-
-<h3 id="toc_22">03.23_Java语言基础(选择结构if语句和switch语句的区别)(掌握)</h3>
-
-<ul>
-<li>A:总结switch语句和if语句的各自使用场景</li>
-<li>  switch建议判断固定值的时候用</li>
-<li>  if建议判断区间或范围的时候用</li>
 <li>B:案例演示
 
 <ul>
-<li>分别用switch语句和if语句实现下列需求：
+<li>for循环和while循环的区别：
 
 <ul>
-<li>键盘录入月份，输出对应的季节</li>
+<li>A:如果你想在循环结束后，继续使用控制条件的那个变量，用while循环，否则用for循环。不知道用谁就用for循环。因为变量及早的从内存中消失，可以提高内存的使用效率。</li>
 </ul></li>
 </ul></li>
 </ul>
 
-<h3 id="toc_23">03.24_day03总结</h3>
+<h3 id="toc_9">04.10_Java语言基础(循环结构注意事项之死循环)</h3>
+
+<ul>
+<li>A:一定要注意控制条件语句控制的那个变量的问题，不要弄丢了，否则就容易死循环。</li>
+<li>B:两种最简单的死循环格式
+
+<ul>
+<li>while(true){...}</li>
+<li>for(;;){...}</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_10">04.11_Java语言基础(循环结构循环嵌套输出4行5列的星星)</h3>
+
+<ul>
+<li><p>A:案例演示</p>
+
+<ul>
+<li>需求：请输出一个4行5列的星星(*)图案。</li>
+<li><div><pre><code class="language-none">如图：
+    *****
+    *****
+    *****
+    *****
+
+注意：
+    System.out.println(&quot;*&quot;);和System.out.print(&quot;*&quot;);的区别</code></pre></div></li>
+</ul></li>
+<li><p>B:结论：</p>
+
+<ul>
+<li>外循环控制行数，内循环控制列数</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_11">04.12_Java语言基础(循环结构循环嵌套输出正三角形)</h3>
+
+<ul>
+<li>A:案例演示</li>
+<li>
+    需求：请输出下列的形状
+    *
+    **
+    ***
+    ****
+    *****</li>
+</ul>
+
+<h3 id="toc_12">04.13_Java语言基础(循环结构九九乘法表)</h3>
+
+<ul>
+<li>A:案例演示
+
+<ul>
+<li>需求：在控制台输出九九乘法表。</li>
+</ul></li>
+<li>B:代码优化</li>
+<li><div><pre><code class="language-none">注意：
+&#39;\x&#39; x表示任意，\是转义符号,这种做法叫转移字符。
+
+&#39;\t&#39;    tab键的位置
+&#39;\r&#39;    回车
+&#39;\n&#39;    换行
+&#39;\&quot;&#39;
+&#39;\&#39;&#39;</code></pre></div></li>
+</ul>
+
+<h3 id="toc_13">04.14_Java语言基础(控制跳转语句break语句)</h3>
+
+<ul>
+<li>A:break的使用场景
+
+<ul>
+<li>只能在switch和循环中 </li>
+</ul></li>
+</ul>
+
+<h3 id="toc_14">04.15_Java语言基础(控制跳转语句continue语句)</h3>
+
+<ul>
+<li>A:continue的使用场景
+
+<ul>
+<li>只能在循环中 </li>
+</ul></li>
+</ul>
+
+<h3 id="toc_15">04.16_Java语言基础(控制跳转语句标号)</h3>
+
+<ul>
+<li>标号:标记某个循环对其控制</li>
+<li>标号组成规则:其实就是合法的标识符</li>
+</ul>
+
+<h3 id="toc_16">04.17_Java语言基础(控制调整语句练习)</h3>
+
+<ul>
+<li>A:练习题</li>
+<li><div><pre><code class="language-none">for(int x=1; x&lt;=10; x++) {
+    if(x%3==0) {
+        //在此处填写代码
+    }
+    System.out.println(“Java基础班”);
+}
+
+我想在控制台输出2次:“Java基础班“
+我想在控制台输出7次:“Java基础班“
+我想在控制台输出13次:“Java基础班“   </code></pre></div></li>
+</ul>
+
+<h3 id="toc_17">04.18_Java语言基础(控制跳转语句return语句)</h3>
+
+<ul>
+<li>A:return的作用
+
+<ul>
+<li>返回</li>
+<li>其实它的作用不是结束循环的，而是结束方法的。</li>
+</ul></li>
+<li>B:案例演示
+
+<ul>
+<li>return和break以及continue的区别?</li>
+<li>return是结束方法</li>
+<li>break是跳出循环</li>
+<li>continue是终止本次循环继续下次循环</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_18">04.19_Java语言基础(方法概述和格式说明)</h3>
+
+<ul>
+<li>A:为什么要有方法
+
+<ul>
+<li>提高代码的复用性 </li>
+</ul></li>
+<li>B:什么是方法
+
+<ul>
+<li>完成特定功能的代码块。 </li>
+</ul></li>
+<li>C:方法的格式</li>
+<li>
+    修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {
+        方法体语句;
+        return 返回值; 
+    } </li>
+<li>D:方法的格式说明
+
+<ul>
+<li>修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。</li>
+<li>返回值类型：就是功能结果的数据类型。</li>
+<li>方法名：符合命名规则即可。方便我们的调用。</li>
+<li>参数：
+
+<ul>
+<li>实际参数：就是实际参与运算的。</li>
+<li>形式参数；就是方法定义上的，用于接收实际参数的。</li>
+</ul></li>
+<li>参数类型：就是参数的数据类型</li>
+<li>参数名：就是变量名</li>
+<li>方法体语句：就是完成功能的代码。</li>
+<li>return：结束方法的。</li>
+<li>返回值：就是功能的结果，由return带给调用者。 </li>
+</ul></li>
+</ul>
+
+<h3 id="toc_19">04.20_Java语言基础(方法之求和案例及其调用)</h3>
+
+<ul>
+<li>A:如何写一个方法
+
+<ul>
+<li>1,明确返回值类型</li>
+<li>2,明确参数列表 </li>
+</ul></li>
+<li>B:案例演示
+
+<ul>
+<li>需求：求两个数据之和的案例</li>
+</ul></li>
+<li>C:方法调用图解</li>
+</ul>
+
+<h3 id="toc_20">04.21_Java语言基础(方法的注意事项)</h3>
+
+<ul>
+<li>A:方法调用(有具体返回值)
+
+<ul>
+<li>a:单独调用,一般来说没有意义，所以不推荐。</li>
+<li>b:输出调用,但是不够好。因为我们可能需要针对结果进行进一步的操作。</li>
+<li>c:赋值调用,推荐方案。</li>
+</ul></li>
+<li>B:案例演示
+
+<ul>
+<li>a:方法不调用不执行</li>
+<li>b:方法与方法是平级关系，不能嵌套定义</li>
+<li>c:方法定义的时候参数之间用逗号隔开</li>
+<li>d:方法调用的时候不用在传递数据类型</li>
+<li>e:如果方法有明确的返回值，一定要有return带回一个值</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_21">04.22_Java语言基础(方法的练习)</h3>
+
+<ul>
+<li>A:案例演示
+
+<ul>
+<li>需求：键盘录入两个数据，返回两个数中的较大值</li>
+</ul></li>
+<li>B:案例演示
+
+<ul>
+<li>需求：键盘录入两个数据，比较两个数是否相等<br></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_22">04.23_Java语言基础(方法之输出星形及其调用)</h3>
+
+<ul>
+<li>A:案例演示
+
+<ul>
+<li>需求：根据键盘录入的行数和列数，在控制台输出星形</li>
+</ul></li>
+<li>B:方法调用：(无返回值,void)
+
+<ul>
+<li>单独调用</li>
+<li>输出调用(错误)</li>
+<li>赋值调用(错误)</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_23">04.24_Java语言基础(方法的练习)</h3>
+
+<ul>
+<li>A:案例演示
+
+<ul>
+<li>需求：根据键盘录入的数据输出对应的乘法表</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_24">04.25_Java语言基础(方法重载概述和基本使用)</h3>
+
+<ul>
+<li>A:方法重载概述
+
+<ul>
+<li>求和案例
+
+<ul>
+<li>2个整数</li>
+<li>3个整数</li>
+<li>4个整数</li>
+</ul></li>
+</ul></li>
+<li><p>B:方法重载：</p>
+
+<ul>
+<li><p>在同一个类中，方法名相同，参数列表不同。与返回值类型无关。</p></li>
+<li><p>参数列表不同：</p>
+
+<ul>
+<li>A:参数个数不同</li>
+<li>B:参数类型不同</li>
+<li>C:参数的顺序不同(算重载,但是在开发中不用)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_25">04.26_Java语言基础(方法重载练习比较数据是否相等)</h3>
+
+<ul>
+<li>A:案例演示
+
+<ul>
+<li>需求：比较两个数据是否相等。</li>
+<li>参数类型分别为两个int类型，两个double类型，并在main方法中进行测试</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_26">04.27_day04总结</h3>
 
 <p>把今天的知识点总结一遍。</p>
 
