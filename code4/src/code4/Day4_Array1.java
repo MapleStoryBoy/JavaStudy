@@ -5,7 +5,12 @@ public class Day4_Array1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = new int[5];  //动态初始化，在内存中开辟连续的5块空间
-
+		
+		System.out.println(arr[0]);//系统给出默认初始化值，整数类型的都是0
+		
+		arr[0] = 10;
+		System.out.println(arr[0]);
+		System.out.println(arr); //[I@7852e922 
 	}
 
 }
@@ -20,4 +25,16 @@ C:动态初始化的格式：
 数据类型[] 数组名 = new 数据类型[数组长度];
 D:案例演示
 输出数组名称和数组元素
+
+整数类型：byte,short,int,long默认初始化值都是0
+浮点类型：float,double默认初始化值都是0.0
+布尔类型：boolean默认初始化值是false
+字符类型：默认初始化值是'\u0000',char在内存中占的两个字节，是16个二进制位。
+\u0000，每一个0其实代表的是16进制的0，那么四个0就是代表16个二进制位。
+
+[I@7852e922 
+[代表是数组，几个就代表几维
+I代表的是int类型
+@是固定的
+7852e922代表的是16进制的地址值
 */
