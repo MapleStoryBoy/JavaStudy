@@ -4,7 +4,12 @@ public class Day4_Array2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int[] arr = new int[3];
+		System.out.println(arr);
+		arr[0] = 10;
+		arr[1] = 20;
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
 	}
 
 }
