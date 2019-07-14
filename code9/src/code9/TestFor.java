@@ -17,6 +17,11 @@ public class TestFor {
 		}
 		System.out.println(sum1);
 		System.out.println(sum2);
+		
+		for (int i=1,j=i+10;i<5;i++,j=i*2) {
+			System.out.println(i);
+			System.out.println(j);
+		}
 
 	}
 
