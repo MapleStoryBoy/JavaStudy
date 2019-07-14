@@ -8,7 +8,7 @@ public class TestContinue {
 		int count = 0;//定义计数器
 		for (int i=100;i<150;i++) {
 			if (i%3==0) {
-				continue;
+				continue;//满足i%3==0，下面代码就不执行返回for循环开头
 		     }
 			System.out.print(i+"\t");
 			count++;
