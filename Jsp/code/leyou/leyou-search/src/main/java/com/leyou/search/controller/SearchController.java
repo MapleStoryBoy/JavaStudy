@@ -1,0 +1,56 @@
+/**
+ * FileName: SearchController
+ * <p>
+ * Author: mac
+ * <p>
+ * Date: 2020/3/7 8:12 下午
+ * <p>
+ * Description:
+ * <p>
+ * History:
+ *
+ * <author> <time> <version> <desc>
+ * <p>
+ * 作者姓名 修改时间 版本号 描述
+ */
+package com.leyou.search.controller;
+
+import com.leyou.common.pojo.PageResult;
+import com.leyou.search.pojo.Goods;
+import com.leyou.search.pojo.SearchRequest;
+import com.leyou.search.pojo.SearchResult;
+import com.leyou.search.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+/**
+ * 〈一句话功能简述〉<br>
+ * 〈〉
+ *
+ * @author mac
+
+ * @create 2020/3/7
+ *
+
+ */
+@Controller
+public class SearchController {
+
+    @Autowired
+    private SearchService searchService;
+
+    @PostMapping("page")
+    public ResponseEntity<SearchResult> search(@RequestBody SearchRequest request){
+
+        SearchResult result = this.searchService.search(request);
+        if (result == null || CollectionUtils.isEmpty(result.getItems())){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(result);
+    }
+
+}
