@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="num">
+        <input type="button" value="点击" v-on:click="num++">
+        <h1>大家好，我是{{name}},有{{num}}妹子迷恋我</h1>
+    </div>
+</body>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data: {
+            name:"Jsp",
+            num:100
+        }
+    })
+</script>
+</html>
